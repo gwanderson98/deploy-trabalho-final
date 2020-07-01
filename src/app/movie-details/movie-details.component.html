@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="card mx-auto" style="width: 30rem; margin-top: 7px;">
+  <img class="card-img-top mx-auto" [src]="'https://image.tmdb.org/t/p/w500' + filmeDetalhado.backdrop_path" />
+  <div class="card-body">
+    <h5 class="card-title">{{filmeDetalhado.title}}</h5>
+    <p class="card-text">{{filmeDetalhado.overview}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Data de lançamento: {{filmeDetalhado.release_date}}</li>
+    <li class="list-group-item">Gênero: {{filmeDetalhado.genres[0].name}}</li>
+  </ul>
+  <div class="card-body card-body-button">
+    <a class="card-link btn btn-primary hBack" href="javascript:void(0)" (click)="backClicked()">Voltar para a home</a>
+    <a class="card-link btn btn-primary hBack" href="javascript:void(0)" (click)="saveFav(filmeDetalhado.id,filmeDetalhado.title)">Favoritos +</a>
+  </div>
+</div>

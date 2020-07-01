@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-dark">
+  <div>
+    <a href="" class="link-bar">Home</a>
+    <a href="/favoritos" class="link-bar">Favoritos</a>
+  </div>
+  <form *ngIf="url_actual =='/'" class="form-inline">
+    <input
+      class="form-control mr-sm-2"
+      type="search"
+      placeholder="Pesquisar"
+      aria-label="Search"
+      #search
+    />
+    <button id="myBtn"
+      class="btn btn-outline-success my-2 my-sm-0"
+      type="button"
+      (click)="getResult(search.value)"
+    >
+      Pesquisar
+    </button>
+  </form>
+</nav>
+<div class="box-all-content">
+  <div class="box-result">
+    <app-result-search [datas]="resultData"></app-result-search>
+  </div>
+</div>

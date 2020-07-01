@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container" id="populares">
+  <div class="box-carousel">
+
+    <ngb-carousel
+      #carousel
+      [interval]="2000"
+      [pauseOnHover]="pauseOnHover"
+      (slide)="onSlide($event)"
+      class=" col-sm-10 col-md-10 col-lg-4 ngb-caroussel"
+    >
+    <ng-template ngbSlide *ngFor="let filme of filmes; index as i">
+
+      <a
+       [routerLink]="['/details',filme.id]"
+        target="_self"
+        rel="nofollow noopener noreferrer"
+      >
+        <div class="picsum-img-wrapper">
+          <img class="image-carossel" [src]="'https://image.tmdb.org/t/p/w500' + filme.poster_path" alt="Popularidade: {{ filme.popularity }}" />
+        </div>
+      </a>
+    </ng-template>
+  </ngb-carousel>
+
+            <div class="result-search">
+
+            </div>
+      </div>
+    </div>
+

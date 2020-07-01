@@ -1,0 +1,17 @@
+.box-carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    width: 100%;
+}
+.carousel-caption{
+  background-color: black;
+  width: 400px;
+  margin-left: -60px;
+}
+.image-carossel{
+  width: 100%;
+  height: 480px;
+}
+.ngb-caroussel{
+}

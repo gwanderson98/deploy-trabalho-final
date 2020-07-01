@@ -1,0 +1,4 @@
+.card-body-button{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,24 @@
+<div style="display: none;"class="container" id="resultados">
+  <div class="card" style="width: 100%;margin-top: 6.9%;">
+    <div class="card-body">
+      <h5 class="card-title">Resultados da busca</h5>
+  <div class="row box-content">
+    <div
+      *ngFor="let data of datas"
+      class="col-sm-12 col-md-6 col-lg-4 box-data"
+    >
+      <div
+        class="box-movie"
+        [routerLink]="['/details', data.id]"
+        target="_self"
+      >
+        <img
+          class="image-carossel"
+          [src]="'https://image.tmdb.org/t/p/w200/' + data.poster_path"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
